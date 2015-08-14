@@ -7,13 +7,14 @@ public class Torneio {
 	private Jogador campeao;
 	private int qtdJogadores;
 	
+
 	public Torneio(){
 		jogadores=new LinkedList<Jogador>();
 		partidas=new LinkedList<Partida>();
 		campeao=new Jogador();
 		qtdJogadores=0;
 	}
-
+// teste do Rodolfo
 	//Cadastra o jogador no campeanato e retorna se o cadastro foi feito com sucesso
 	public boolean insertJogador(Jogador jog){
 		
