@@ -26,6 +26,7 @@ public class Torneio {
 		return true;
 	}
 	
+	//Retorna todos os jogadores
 	public LinkedList readJogadores(){
 		return jogadores;
 	}
