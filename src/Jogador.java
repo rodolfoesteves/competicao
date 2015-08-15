@@ -11,6 +11,11 @@ public class Jogador {
 		endereco="";
 		telefone="";
 	}
+	
+	public boolean cadastrarJogador(){
+		Torneio torneio=new Torneio();
+		return torneio.insertJogador(this);
+	}
 
 	public String getNome() {
 		return nome;
