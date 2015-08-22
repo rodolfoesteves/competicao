@@ -28,7 +28,7 @@ public class Torneio {
 		return true;
 	}
 	
-	//Cadastra a partida no campeanato e retorna se o cadastro foi feito com sucesso
+	//Cadastra a partida no campeonato e retorna se o cadastro foi feito com sucesso
 	public boolean insertPartido(Partida partida){
 		
 		try{
