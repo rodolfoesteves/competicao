@@ -53,6 +53,7 @@ public class Cadastro_Jogador {
 	 */
 	public Cadastro_Jogador() {
 		initialize();
+		torneio=new Torneio();
 	}
 
 	/**
@@ -78,7 +79,7 @@ public class Cadastro_Jogador {
 		txtComplemento.setText("");
 		txtBairro.setText("");
 		txtCidade.setText("");
-		cmbEstado.setSelectedItem("");
+		cmbEstado.setSelectedItem("SELECIONE");
 		}
 	
 	private void initialize() {
@@ -144,7 +145,7 @@ public class Cadastro_Jogador {
 		gbc_lblTelefone.gridy = 3;
 		frame.getContentPane().add(lblTelefone, gbc_lblTelefone);
 		
-		JTextField txtTelefone = new JTextField();
+		txtTelefone = new JTextField();
 		txtTelefone.setColumns(10);
 		GridBagConstraints gbc_txtTelefone = new GridBagConstraints();
 		gbc_txtTelefone.insets = new Insets(0, 0, 5, 5);
@@ -246,7 +247,7 @@ public class Cadastro_Jogador {
 		gbc_lblEstado.gridy = 9;
 		frame.getContentPane().add(lblEstado, gbc_lblEstado);
 		
-		JComboBox cmbEstado = new JComboBox();
+		cmbEstado = new JComboBox();
 		cmbEstado.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		cmbEstado.setModel(new DefaultComboBoxModel(new String[] {"SELECIONE", "Acre (AC)", "Alagoas (AL)", "Amap\u00E1 (AP)", "Amazonas (AM)", "Bahia (BA)", "Cear\u00E1 (CE)", "Distrito Federal (DF)", "Esp\u00EDrito Santo (ES)", "Goi\u00E1s (GO)", "Maranh\u00E3o (MA)", "Mato Grosso (MT)", "Mato Grosso do Sul (MS)", "Minas Gerais (MG)", "Par\u00E1 (PA) ", "Para\u00EDba (PB)", "Paran\u00E1 (PR)", "Pernambuco (PE)", "Piau\u00ED (PI)", "Rio de Janeiro (RJ)", "Rio Grande do Norte (RN)", "Rio Grande do Sul (RS)", "Rond\u00F4nia (RO)", "Roraima (RR)", "Santa Catarina (SC)", "S\u00E3o Paulo (SP)", "Sergipe (SE)", "Tocantins (TO)"}));
 		cmbEstado.setToolTipText("");
