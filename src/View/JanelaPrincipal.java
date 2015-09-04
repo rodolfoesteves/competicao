@@ -31,11 +31,8 @@ public class JanelaPrincipal extends JFrame{
 	public JanelaPrincipal() {
 		torneio=new Torneio();
 		initialize();
-		
-		
-		
 	}
-
+	
 	
 	/**
 	 * Initialize the contents of the frame.

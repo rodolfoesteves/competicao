@@ -13,7 +13,7 @@ import View.JanelaPrincipal;
 
 public class Torneio {
  
-	private static Torneio frame=new Torneio();
+	
 	private CadastroJogador cadastroJogador;
 	private LinkedList<Jogador> jogadores;
 	private LinkedList<Partida> partidas;
@@ -21,6 +21,13 @@ public class Torneio {
 	private int qtdJogadores;
 	
 
+	public static void main(String[] args) {
+
+		JanelaPrincipal frame = new JanelaPrincipal();
+		frame.setVisible(true);
+	
+	}
+	
 	public Torneio(){
 		cadastroJogador=new CadastroJogador();
 		jogadores=new LinkedList<Jogador>();
