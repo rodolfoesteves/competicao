@@ -8,7 +8,6 @@ import javax.swing.JOptionPane;
 import Model.Jogador;
 import Model.Partida;
 import View.CadastroJogador;
-import View.Frame;
 import View.JanelaPrincipal;
 
 public class Torneio {

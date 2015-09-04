@@ -1,44 +1,53 @@
 package View;
-import java.awt.EventQueue;
 
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import java.awt.BorderLayout;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 
 import Control.Torneio;
-
-import java.awt.Font;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import javax.swing.JRadioButton;
-import java.awt.Insets;
-import javax.swing.JSeparator;
-import java.awt.GridLayout;
 import net.miginfocom.swing.MigLayout;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
-public class JanelaPrincipal extends JFrame{
+public class JanelaPrincipal extends JFrame {
 
+	private JPanel contentPane;
+	private Torneio torneio;
 
-	
-	public Torneio torneio;
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					JanelaPrincipal frame = new JanelaPrincipal();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 
-	
+	/**
+	 * Create the frame.
+	 */
 	public JanelaPrincipal() {
-		torneio=new Torneio();
 		initialize();
+		torneio=new Torneio();
 	}
 	
-	
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	private void initialize() {
-	
+		
 		this.setTitle("Torneio");
 		this.setBounds(100, 100, 1200, 567);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -67,7 +76,7 @@ public class JanelaPrincipal extends JFrame{
 		JLabel label_2 = new JLabel("");
 		this.getContentPane().add(label_2, "flowy,cell 4 0,grow");
 		
-		JLabel lblJogo_4 = new JLabel("Jogo 9");
+		JLabel lblJogo_4 = new JLabel("Jogo 1");
 		lblJogo_4.setFont(new Font("Tahoma", Font.BOLD, 11));
 		this.getContentPane().add(lblJogo_4, "cell 0 1,grow");
 		
@@ -80,8 +89,9 @@ public class JanelaPrincipal extends JFrame{
 		JLabel label_5 = new JLabel("");
 		this.getContentPane().add(label_5, "cell 3 1,grow");
 		
-		JRadioButton rdbtnTime_1 = new JRadioButton("Time 2");
-		this.getContentPane().add(rdbtnTime_1, "cell 4 1,grow");
+		JLabel lblJogo_7 = new JLabel("Jogo 5");
+		lblJogo_7.setFont(new Font("Tahoma", Font.BOLD, 11));
+		getContentPane().add(lblJogo_7, "cell 4 1");
 		
 		JRadioButton rdbtnVencedorJogo_1 = new JRadioButton("Vencedor Jogo 2");
 		this.getContentPane().add(rdbtnVencedorJogo_1, "cell 0 2,grow");
@@ -92,8 +102,8 @@ public class JanelaPrincipal extends JFrame{
 		JLabel label_7 = new JLabel("");
 		this.getContentPane().add(label_7, "cell 2 2,grow");
 		
-		JRadioButton rdbtnVencedorJogo = new JRadioButton("Vencedor Jogo1");
-		this.getContentPane().add(rdbtnVencedorJogo, "flowx,cell 4 2,grow");
+		JRadioButton radioButton_1 = new JRadioButton("Vencedor Jogo1");
+		getContentPane().add(radioButton_1, "flowx,cell 4 2");
 		
 		JLabel label_8 = new JLabel("");
 		this.getContentPane().add(label_8, "cell 4 2,grow");
@@ -107,9 +117,8 @@ public class JanelaPrincipal extends JFrame{
 		JLabel label_10 = new JLabel("");
 		this.getContentPane().add(label_10, "cell 3 3,grow");
 		
-		JLabel lblJogo_1 = new JLabel("Jogo 2");
-		lblJogo_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		this.getContentPane().add(lblJogo_1, "cell 4 3,grow");
+		JRadioButton radioButton = new JRadioButton("Time 2");
+		getContentPane().add(radioButton, "cell 4 3");
 		
 		JLabel label_11 = new JLabel("");
 		this.getContentPane().add(label_11, "flowy,cell 0 4,grow");
@@ -129,8 +138,8 @@ public class JanelaPrincipal extends JFrame{
 		JLabel label_15 = new JLabel("");
 		this.getContentPane().add(label_15, "cell 3 5,grow");
 		
-		JRadioButton rdbtnVencedorJogo_4 = new JRadioButton("Vencedor Jogo 10");
-		this.getContentPane().add(rdbtnVencedorJogo_4, "cell 4 5,grow");
+		JRadioButton rdbtnTime_1 = new JRadioButton("Time 2");
+		this.getContentPane().add(rdbtnTime_1, "cell 4 5,grow");
 		
 		JRadioButton rdbtnTime_3 = new JRadioButton("Time 4");
 		this.getContentPane().add(rdbtnTime_3, "cell 0 6,grow");
@@ -141,8 +150,11 @@ public class JanelaPrincipal extends JFrame{
 		JLabel label_17 = new JLabel("");
 		this.getContentPane().add(label_17, "cell 2 6,grow");
 		
+		JRadioButton rdbtnVencedorJogo = new JRadioButton("Vencedor Jogo1");
+		this.getContentPane().add(rdbtnVencedorJogo, "flowx,cell 4 6,grow");
+		
 		JLabel label_18 = new JLabel("");
-		this.getContentPane().add(label_18, "flowy,cell 4 6,grow");
+		this.getContentPane().add(label_18, "cell 4 6,grow");
 		
 		JLabel label_19 = new JLabel("");
 		this.getContentPane().add(label_19, "flowy,cell 0 7,grow");
@@ -153,23 +165,23 @@ public class JanelaPrincipal extends JFrame{
 		JLabel label_21 = new JLabel("");
 		this.getContentPane().add(label_21, "cell 3 7,grow");
 		
-		JRadioButton rdbtnVendedorJogo = new JRadioButton("Vendedor Jogo 4");
-		this.getContentPane().add(rdbtnVendedorJogo, "flowx,cell 4 7,grow");
-		
 		JLabel label_22 = new JLabel("");
-		this.getContentPane().add(label_22, "cell 4 7,grow");
+		this.getContentPane().add(label_22, "flowy,cell 4 7,grow");
 		
 		JRadioButton rdbtnVencedorJogo_2 = new JRadioButton("Vencedor Jogo 3");
 		this.getContentPane().add(rdbtnVencedorJogo_2, "cell 0 8,grow");
 		
-		JRadioButton rdbtnTime_7 = new JRadioButton("Time 8");
-		this.getContentPane().add(rdbtnTime_7, "cell 4 8,grow");
+		JRadioButton rdbtnTime_5 = new JRadioButton("Time 6");
+		this.getContentPane().add(rdbtnTime_5, "cell 4 8,grow");
 		
 		JRadioButton rdbtnTime_6 = new JRadioButton("Time 7");
 		this.getContentPane().add(rdbtnTime_6, "cell 0 9,grow");
 		
 		JLabel label_23 = new JLabel("");
 		this.getContentPane().add(label_23, "cell 1 9,grow");
+		
+		JRadioButton rdbtnVencedorJogo_4 = new JRadioButton("Vencedor Jogo 10");
+		this.getContentPane().add(rdbtnVencedorJogo_4, "flowy,cell 4 9,grow");
 		
 		JLabel label_24 = new JLabel("");
 		this.getContentPane().add(label_24, "cell 4 9,grow");
@@ -185,7 +197,7 @@ public class JanelaPrincipal extends JFrame{
 		this.getContentPane().add(label_26, "cell 2 10,grow");
 		
 		JLabel label_27 = new JLabel("");
-		this.getContentPane().add(label_27, "cell 4 10,grow");
+		this.getContentPane().add(label_27, "flowy,cell 4 10,grow");
 		
 		JLabel label_28 = new JLabel("");
 		this.getContentPane().add(label_28, "flowy,cell 0 11,grow");
@@ -200,13 +212,13 @@ public class JanelaPrincipal extends JFrame{
 		this.getContentPane().add(label_31, "cell 3 11,grow");
 		
 		JLabel label_32 = new JLabel("");
-		this.getContentPane().add(label_32, "cell 4 11,grow");
+		this.getContentPane().add(label_32, "flowy,cell 4 11,grow");
 		
-		JLabel lblJogo_2 = new JLabel("Jogo 3");
+		JLabel lblJogo_2 = new JLabel("Jogo 2");
 		lblJogo_2.setFont(new Font("Tahoma", Font.BOLD, 11));
 		this.getContentPane().add(lblJogo_2, "cell 0 4,grow");
 		
-		JLabel lblJogo_5 = new JLabel("Jogo 10");
+		JLabel lblJogo_5 = new JLabel("Jogo 3");
 		lblJogo_5.setVerticalAlignment(SwingConstants.BOTTOM);
 		lblJogo_5.setVerticalTextPosition(SwingConstants.BOTTOM);
 		lblJogo_5.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -219,15 +231,23 @@ public class JanelaPrincipal extends JFrame{
 		JRadioButton rdbtnTime_2 = new JRadioButton("Time 3");
 		this.getContentPane().add(rdbtnTime_2, "cell 0 12,grow");
 		
-		JLabel lblJogo = new JLabel("Jogo 1");
-		lblJogo.setFont(new Font("Tahoma", Font.BOLD, 11));
-		this.getContentPane().add(lblJogo, "cell 4 0,grow");
+		JRadioButton rdbtnTime_7 = new JRadioButton("Time 8");
+		this.getContentPane().add(rdbtnTime_7, "cell 4 12,grow");
 		
-		JRadioButton rdbtnTime_5 = new JRadioButton("Time 6");
-		this.getContentPane().add(rdbtnTime_5, "cell 4 4,grow");
+		JRadioButton rdbtnVendedorJogo = new JRadioButton("Vendedor Jogo 4");
+		this.getContentPane().add(rdbtnVendedorJogo, "cell 4 11,grow");
 		
-		JLabel lblJogo_6 = new JLabel("Jogo 13");
+		JLabel lblJogo_6 = new JLabel("Jogo 8");
 		lblJogo_6.setFont(new Font("Tahoma", Font.BOLD, 11));
-		this.getContentPane().add(lblJogo_6, "cell 4 6,grow");
+		this.getContentPane().add(lblJogo_6, "cell 4 10,grow");
+		
+		JLabel lblJogo_1 = new JLabel("Jogo 7");
+		lblJogo_1.setFont(new Font("Tahoma", Font.BOLD, 11));
+		this.getContentPane().add(lblJogo_1, "cell 4 7,grow");
+		
+		JLabel lblJogo = new JLabel("Jogo 6");
+		lblJogo.setFont(new Font("Tahoma", Font.BOLD, 11));
+		this.getContentPane().add(lblJogo, "cell 4 4,grow");
 	}
+
 }
